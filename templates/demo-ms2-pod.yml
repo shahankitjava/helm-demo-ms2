@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-ms2-pod
+  labels:
+    app: arc-demo-ms2
+    component: arc-component
+spec:
+  containers:
+    - name: demo-ms1
+      image: us.icr.io/ct-ticketing/demo-ms2:v1
+      ports:
+        - containerPort: 8888 
+  imagePullSecrets:
+    - name: default-us-icr-io
