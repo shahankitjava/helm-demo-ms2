@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-ms2-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: arc-demo-ms2
+      component: arc-component
+  template:
+    metadata:
+      labels:
+        app: arc-demo-ms2
+        component: arc-component
+    spec:
+      containers:
+      - name: demo-ms2-pod
+        image: us.icr.io/ct-ticketing/demo-ms2:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8888

@@ -7,7 +7,7 @@ metadata:
     component: arc-component
 spec:
   containers:
-    - name: demo-ms1
+    - name: demo-ms2
       image: us.icr.io/ct-ticketing/demo-ms2:v1
       ports:
         - containerPort: 8888 
