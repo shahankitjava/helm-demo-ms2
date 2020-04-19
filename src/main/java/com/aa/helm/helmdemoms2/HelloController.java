@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-@GetMapping(value="/helm2")
+@GetMapping(value="/helm2/{id}")
 public @ResponseBody HelmResponse greet(@PathVariable String id) {
     HelmResponse helmResponse = new HelmResponse();
     helmResponse.setWelcome("Helm 2 - Demo MS 2 : " + id);
