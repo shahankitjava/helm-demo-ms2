@@ -17,7 +17,7 @@ spec:
       containers:
       - name: demo-ms2-pod
         image: us.icr.io/ct-ticketing/demo-ms2:v1
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - containerPort: 8888
       imagePullSecrets:
