@@ -1,0 +1,4 @@
+server:
+  port: 8888
+helm3:
+  url:  http://localhost:9999/helm3/CallFromHelm2
