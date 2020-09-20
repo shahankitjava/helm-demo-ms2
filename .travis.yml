@@ -11,6 +11,6 @@ services:
   - docker
 
 after_success:
-  - docker build -t shahankitturn/demo-ms2:v1 .
+  - docker build -t shahankitturn/demo-ms2 .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push shahankitturn/demo-ms2:v1
+  - docker push shahankitturn/demo-ms2
