@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: helm-demo-ms2
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  namespace: default
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            backend:
+              serviceName: helm-demo-ms2-service
+              servicePort: 80
